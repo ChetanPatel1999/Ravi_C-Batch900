@@ -24,7 +24,7 @@ int main()
     cout << "my name : " << combineName("ram", "sharma");
 
     // cout << "average = " << average(12, 7) << endl;
-
     // cout << "uparcase = " << upercase('a');
+    
     return 0;
 }
