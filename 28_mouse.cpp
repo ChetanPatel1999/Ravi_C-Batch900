@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+int a;
 class mouse
 {
     // data members
@@ -7,13 +8,34 @@ class mouse
     int price;
     float rating;
     // methods
+    bool checkColor(string c) // red
+    {
+        int i;
+        for (i = 0; c[i] != '\0'; i++)
+        {
+            if (!(c[i] >= 'a' && c[i] <= 'z'))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
 public:
     void setMouse(string c, int p, float r) // setter method
     {
-        color = c;
+        if (checkColor(c))
+        {
+            color = c;
+        }
+        else
+        {
+            color = "invalid value";
+        }
         price = p;
         rating = r;
     }
+
     void getMouse() // getter method
     {
 
@@ -24,10 +46,11 @@ public:
         cout << "-----------------------\n\n";
     }
 };
+
 int main()
 {
     mouse m1, m2, m3;
-    m1.setMouse("black", 200, 3.5);
+    m1.setMouse("89", 200, 3.5);
     m2.setMouse("blue", 300, 4.5);
     m3.setMouse("white", 400, 4.9);
 
