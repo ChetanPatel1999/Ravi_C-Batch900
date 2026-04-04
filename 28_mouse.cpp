@@ -38,7 +38,7 @@ public:
 
     void getMouse() // getter method
     {
-
+        
         cout << "mouse info : " << endl;
         cout << "mouse color : " << color << endl;
         cout << "mouse price : " << price << endl;
@@ -57,5 +57,7 @@ int main()
     m1.getMouse();
     m2.getMouse();
     m3.getMouse();
+
+
     return 0;
 }
