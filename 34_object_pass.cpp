@@ -53,7 +53,7 @@ public:
 
     static void getTotalResult()
     {
-        
+
         cout << "totaPass : " << totalPass << endl;
         cout << "totaFail : " << totalFail << endl;
         cout << "-------------------------------------\n\n";
@@ -75,6 +75,30 @@ public:
         cout << "getStudent(): " << endl;
         cout << "------------------------------------------" << endl;
     }
+    void average(student obj1)
+    {
+        float ave;
+        ave = (per + obj1.per) / 2.0;
+        cout << "average = " << ave << endl;
+        cout << "------------------------------------------" << endl;
+    }
+
+    static void average(student obj1, student obj2)
+    {
+        float ave;
+        ave = (obj1.per + obj2.per) / 2.0;
+        cout << "average = " << ave << endl;
+        cout << "------------------------------------------" << endl;
+    }
+    static void average(student obj1, student obj2, student obj3)
+    {
+        float ave;
+        ave = (obj1.per + obj2.per + obj3.per) / 3.0;
+        cout << "average = " << ave << endl;
+        cout << "------------------------------------------" << endl;
+    }
+
+    
 };
 int student::totalStd = 0;
 int student::totalPass = 0;
@@ -97,5 +121,12 @@ int main()
 
     student::getTotalStudent();
     student::getTotalResult();
+
+    // s1.average(s2);
+
+    // s3.average(s4);
+
+    student::average(s1, s2);
+    student::average(s1, s2, s3);
     return 0;
 }

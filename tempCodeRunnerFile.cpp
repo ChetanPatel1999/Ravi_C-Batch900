@@ -1,1 +1,1 @@
-int count = 0;
+    n1.sumDiffObjectDataMember();
