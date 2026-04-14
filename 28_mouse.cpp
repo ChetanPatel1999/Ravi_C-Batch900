@@ -22,7 +22,7 @@ class mouse
     }
 
 public:
-    void setMouse(string c, int p, float r) // setter method
+    mouse(string c, int p, float r) // setter method
     {
         if (checkColor(c))
         {
@@ -38,7 +38,7 @@ public:
 
     void getMouse() // getter method
     {
-        
+
         cout << "mouse info : " << endl;
         cout << "mouse color : " << color << endl;
         cout << "mouse price : " << price << endl;
@@ -49,15 +49,14 @@ public:
 
 int main()
 {
-    mouse m1, m2, m3;
-    m1.setMouse("89", 200, 3.5);
-    m2.setMouse("blue", 300, 4.5);
-    m3.setMouse("white", 400, 4.9);
+
+    mouse m1("89", 200, 3.5);
+    mouse m2("blue", 300, 4.5);
+    mouse m3("white", 400, 4.9);
 
     m1.getMouse();
     m2.getMouse();
     m3.getMouse();
-
 
     return 0;
 }

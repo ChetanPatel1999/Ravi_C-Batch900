@@ -7,7 +7,7 @@ class Circle
     float circumference;
 
 public:
-    void setRadius(float r)
+    Circle(float r)
     {
         radius = r;
     }
@@ -27,12 +27,10 @@ public:
 };
 int main()
 {
-    Circle c1, c2;
-    c1.setRadius(5.3);
+    Circle c1(5.3), c2(4);
     c1.computeOperation();
     c1.getCircle();
-    
-    c2.setRadius(4);
+
     c2.computeOperation();
     c2.getCircle();
     return 0;
