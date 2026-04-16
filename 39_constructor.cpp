@@ -7,6 +7,7 @@ class car
     int year;
 
 public:
+    car() {}
     car(string m, string c, int y)
     {
         modle = m;
@@ -41,6 +42,7 @@ int main()
     car c2("fortuner", "black", 2026);
     car c3("curve", "red");
     car c4("nexon");
+    car c5;
     c1.getCar();
     c2.getCar();
     c3.getCar();
