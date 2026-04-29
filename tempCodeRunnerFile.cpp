@@ -1,1 +1,1 @@
-  public:
+  ptr = arr; // 400
