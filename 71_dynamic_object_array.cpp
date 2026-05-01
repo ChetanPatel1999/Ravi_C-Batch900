@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 class student
@@ -8,10 +7,13 @@ public:
     int rno;
 
 public:
-    student(string n, int r)
+    student()
     {
-        name = n;
-        rno = r;
+        cout << "enter student info : " << endl;
+        cout << "enter student name : ";
+        cin >> name;
+        cout << "enter student rno : ";
+        cin >> rno;
     }
     void getStudent()
     {
@@ -24,15 +26,11 @@ public:
 int main()
 {
 
-    student *ptr1 = new student("ravi", 101);
-    student *ptr2 = new student("nishi", 102);
-
-    ptr1->getStudent();
-    ptr2->getStudent();
-
-    delete ptr1;
-    delete ptr2;
-
-    
-    return 0;
+    student *ptr = new student[3];
+    int i;
+    for (i = 0; i < 3; i++)
+    {
+        ptr->getStudent();
+        ptr++;
+    }
 }
